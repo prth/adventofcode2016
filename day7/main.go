@@ -116,7 +116,7 @@ func hasABBA(str string) bool {
 	}
 
 	for i := 0; i < len(str)-3; i++ {
-		if str[i] != str[i+1] && str[i:i+2] == string(str[i+3])+string(str[i+2]) {
+		if isABBA(str[i : i+4]) {
 			return true
 		}
 	}
